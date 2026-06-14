@@ -8,7 +8,6 @@ from jwt.exceptions import DecodeError, ExpiredSignatureError
 users_db: dict[str, dict] = {}
 ads_db: dict[str, 'Ad'] = {}
 
-# Модели данных
 class UserCreate(BaseModel):
     email: str
     password: str
