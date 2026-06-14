@@ -5,7 +5,6 @@ from pydantic import BaseModel, Field
 import jwt
 from jwt.exceptions import DecodeError, ExpiredSignatureError
 
-# Базы данных (в памяти, для примера)
 users_db: dict[str, dict] = {}
 ads_db: dict[str, 'Ad'] = {}
 
@@ -28,7 +27,6 @@ class Ad(AdCreate):
     owner_id: str
     created_at: datetime
 
-# Функции для работы с паролями
 def hash_password(password: str) -> str:
     salt = bcrypt.gensalt()
     hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
