@@ -129,7 +129,6 @@ async def delete_ad(request: web.Request) -> web.Response:
     return web.json_response({"status": "deleted"}, status=200)
 
 
-# Регистрация маршрутов
 app.router.add_post('/register', register)
 app.router.add_post('/login', login)
 app.router.add_post('/ads', create_ad)
